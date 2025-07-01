@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Takband Qandeel</title>
+  </head>
+  <body>
+    <h1>اشعار {{ author }}</h1>
+
+    <ul>
+      {% for poem in poems %}
+      <li>{{ poem.title }}</li>
+      {% empty %}
+      <li>هیچ شعری یافت نشد.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
